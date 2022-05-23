@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JQuery</title>
+</head>
+<body>
+
+  <p>Parágrafo 1</p>
+  <p id="teste">Parágrafo 2</p>
+  <p class="p-yellow">Parágrafo 3</p>
+  <hr>
+  <input id="campoTexto" type="text" placeholder="Digite algo" style="height: 50px">
+  <button id="botao" style="height:50px">Botão</button>
+  
+  <script src="./jquery-3.6.0.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      $("#botao").hover(function(){
+        $(this).text("Entrou o mouse")
+      },
+        function(){
+          $(this).text("Saiu o mouse")
+        }
+      )
+
+      $("#campoTexto").focus(function(){
+        $(this).css("background-color", "yellow")
+      })
+    })
+    
+
+  </script>
+</body>
+</html>
